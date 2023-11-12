@@ -21,6 +21,12 @@ newp5.innerText = "Welcome to Javascript Language";
 newSection.appendChild(newp5);
 document.body.appendChild(newSection);
 
+const fruits = ["Apple","Cherry", "Banana"];
+console.log(fruits);
+let len = fruits.length;
+console.log(len);
+const last = fruits[fruits.length-1];
+console.log(last);
 
 
 
