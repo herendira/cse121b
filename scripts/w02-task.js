@@ -30,13 +30,19 @@ imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 /* Step 5 - Array */
 const favFood = ["Tamales", " Sushi", " Fish", " Carrot cream"];
 foodElement.innerHTML = favFood;
-const otherFood = [" Lemon pie", " Guava'atole"];
-favFood.push(otherFood);
+const otherFood = ["Lemon pie", "Guava Atole"];
+
+favFood.push(otherFood);  //agrega
+foodElement.innerHTML += `<br>${favFood}`; //imprime
+
+favFood.shift(); //quita el primer elem del arreglo
+foodElement.innerHTML += `<br>${favFood}`; //imprime
+
+//const last = favFood[favFood.lenght-1];
+//const removelast = favFood.splice(last)
+otherFood.pop();
 foodElement.innerHTML += `<br>${favFood}`;
-favFood.shift();
-foodElement.innerHTML += `<br>${favFood}`;
-favFood.pop();
-foodElement.innerHTML += `<br>${favFood}`;
+
 
 
 
