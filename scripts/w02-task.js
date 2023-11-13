@@ -6,7 +6,7 @@
 const fullName = "Herendira Gomez Herrera";
 let currentYear = "2023";
 
-var profilePicture = 'images/yo.jpg';
+var profilePicture = 'images/yo2.jpg';
 
 
 
