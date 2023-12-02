@@ -5,14 +5,6 @@ const templesElement = document.querySelector('#temples');
 let templesList = [];
 
 
-
-/* async displayTemples Function */
-
-     
-
-
-//displayTemples(templesList);
-
 /* async getTemples Function using fetch()*/
 const getTemples = async() =>{
     const response = await fetch('https://byui-cse.github.io/cse121b-ww-course/resources/temples.json');
@@ -24,6 +16,9 @@ const getTemples = async() =>{
         console.log("Error");
     }
 };
+
+/* DisplayTemples Function */
+
 const displayTemples = (templesList) => {
     templesList.forEach((temple) => {
         //creating an article
@@ -49,7 +44,6 @@ function reset(){
     const templesElement = document.querySelector("#temples");
     //clearing the variable templesElement
     templesElement.innerHTML = '';
-
 }
 
 
@@ -74,8 +68,10 @@ const sortBy = (temples) =>{
     //filtering temples built before 1950 and display them
     case'older':
     const olderTem = temples.filter(temple => {
-        const dedicatedYear = temple.dedicated.split(',')[0].trim(); // Extracting the year from the 'dedicated' string
-        return parseInt(dedicatedYear) < 1950; // Comparing the parsed year with 1950
+        //Extracting the year from the 'dedicated' string, first splitting separating it by commas, and after with method trim() removing whitespaces.
+        const dedYear = temple.dedicated.split(',')[0].trim(); 
+        //Converting deYear to int so it can be compared with 1950
+        return parseInt(dedYear) < 1950; 
         });
         displayTemples(olderTem);
         break;
@@ -88,13 +84,9 @@ const sortBy = (temples) =>{
     }
 };
 
-
-
-
-
-
 /* Event Listener */
 document.querySelector('#sortBy').addEventListener("change", () => {
     sortBy(templesList)});
 
+//Calling the function getTemples()
 getTemples();
