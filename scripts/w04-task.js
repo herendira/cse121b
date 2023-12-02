@@ -3,7 +3,7 @@
 /* Profile Object  */
 let myProfile ={
     name: "Herendira Gomez Herrera",
-    photo:"images/yo2.jpg",
+    photo:"images/yo.jpg",
     favoriteFoods: ['Chicken soup', 'Chilaquiles', 'Chocoflan','Charros beans'],
     hobbies: ['Play the guitar', "Sewing", 'Knitting'],
     placesLived:[],
@@ -28,7 +28,7 @@ myProfile.placesLived.push(
     {
         place: 'Levis QC',
         length: '1 years'
-    },
+    }
 
     
 );
