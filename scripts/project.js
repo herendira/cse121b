@@ -1,40 +1,42 @@
-/* W05: Programming Tasks */
+/*Project*/
 
 /* Declare and initialize global variables */
-const templesElement = document.querySelector('#temples');
-let templesList = [];
+const countryElement = document.querySelector('#country');
+let countriesList = [];
 
 
-/* async getTemples Function using fetch()*/
-const getTemples = async() =>{
-    const response = await fetch('https://byui-cse.github.io/cse121b-ww-course/resources/temples.json');
+/* async getCountries Function using fetch()*/
+const getCountries = async() =>{
+    const response = await fetch('https://run.mocky.io/v3/d9d734f1-3055-4d67-86d6-3cd7267dc8d8');
     //converting response into (.json) adn assigning the result to the templeList global array. The process is waiting with ifs statements.
     if(response.ok){
-        const data = await response.json();
-        templesList = data;
+        
+        countriesList = await response.json();
+        console.log("Data: ", countriesList);
     } else {
-        console.log("Error");
+        console.log("Error", response);
     }
+    displayCountry(countriesList);
 };
 
 /* DisplayTemples Function */
 
-const displayTemples = (templesList) => {
-    templesList.forEach((temple) => {
+    const displayCountry = (countriesList) => {
+    countriesList.forEach((con) => {
         //creating an article
         const articleE = document.createElement("article");
         //creating h3 and adding the property templeName from the array temples to h3.
         const h3E = document.createElement("h3");
-        h3E.textContent = temple.templeName;
+        h3E.textContent = con.country;
         //creating an img and adding it images from the temples, and add atributes: src(imagesUrl) and alt(location).
         const imgE = document.createElement("img");
-        imgE.src = temple.imageUrl;
-        imgE.alt = temple.location;
+        imgE.src = con.image || '';
+        imgE.alt = con.altText || '';
         //appending h3E and imgE to the articleE as children
         articleE.appendChild(h3E);
         articleE.appendChild(imgE);
         //appending articleE to the goblal variable templesElement
-        templesElement.appendChild(articleE);
+        countryElement.appendChild(articleE);
     });
     };
 
@@ -64,7 +66,6 @@ const sortBy = (temples) =>{
     case'notutah':
         const notUtTemple = temples.filter(temples => !temples.location.includes('Utah'));
         displayTemples(notUtTemple);
-        break;
     
     //filtering temples built before 1950 and display them
     case'older':
@@ -90,4 +91,5 @@ document.querySelector('#sortBy').addEventListener("change", () => {
     sortBy(templesList)});
 
 //Calling the function getTemples()
-getTemples();
+getCountries();
+displayCountry(countriesList);

@@ -1,0 +1,38 @@
+[
+  {
+    "country": "Guatemala",
+    "capital": "Harper Lee",
+    "money": ["Quetzal","7.82"],
+    "cities": ["Quetzaltenango", "Peten", "Guatemala"],
+    "nocities": ["Puerto Barrios", "Escuintla", "La libertad", "Amatitlan"],
+    
+  },
+  {
+    "country": "Brasil",
+    "capital": "Rio de Janeiro",
+    "money": ["Brazilian real","4.94"],
+    "cities": ["Rio de Janeiro", "Sao Paulo", "Belo Horizonte"],
+    "nocities": ["Buritizal", "Santa Salete", "Taquaral", "Dirce Reis"],
+  },
+  {
+    "country": "Chile",
+    "capital": "Santiago",
+    "money": ["Chilean peso","641.36 pesos"],
+    "cities": ["Santiago", "Conception", "La Serena"],
+    "nocities": ["El gran Conception", "Coronel", "Talca", "Osorno"],
+  }
+{
+    "country": "Argentina",
+    "capital": "Buenos Aires",
+    "money": ["Argentin peso", "362.45"],
+    "cities": ["Buenos Aires", "Mar de Plata", "Bariloche"],
+    "nocities": ["Rosario", "Salta", "Villa 21", "Villa Itati"],
+  },
+  {
+    "country": "Peru",
+    "capital": "Lima",
+    "money": ["Peruvian Nuevo sol","3.75"],
+    "cities": ["Lima", "Arequipa", "Trujillo"],
+    "nocities": ["Junin", "Puno", "Tacna", "Cusco"],
+  }
+]
