@@ -42,13 +42,13 @@
 
     <div id="country">
     </div>
-
+<div class="container">
     <h3>City Search</h3>
     <label for="cityInput"id ="cityLabel">Enter a city you plan to visit: </label>
     <input type="text" id="cityInput">
     <button onclick="searchCity()">Search</button>
     <div id="result"></div>
-  
+
     
     <h4>Currency Converter</h4>
     <label for="amountUSD"id ="amountLabel">Enter amount in USD:</label>
@@ -56,11 +56,10 @@
     <div id="USD"></div>
 
     <button onclick="reset()" class="resetButton">reset</button>
+</div> 
 </main> 
 
-  <footer>
-    &copy;<span id="year"></span> | Week 06 - Project| CSE 121b
-  </footer>
+  
   <script src="scripts/main.js"></script>
   <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
