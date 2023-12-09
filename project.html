@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/project.css">
 </head>
 
 <body>
@@ -28,21 +28,35 @@
     <h1>Project</h1>
     <h2>Traveling Sud America</h2>
 
-    <select id="sortBy" title="Choose a data filter.">
-      <option value="" disabled selected>Country</option>
+    <select id="select" title="Choose your destination.">
+      <option value="" disabled selected>Select a Country</option>
       <option value="guate">Guatemala</option>
       <option value="bras">Brasil</option>
       <option value="chil">Chile</option>
       <option value="arge">Argentina</option>
       <option value="per">Peru</option>
+     
 
       </option>
     </select>
 
     <div id="country">
     </div>
-  </main>
 
+    <h3>City Search</h3>
+    <label for="cityInput"id ="cityLabel">Enter a city you plan to visit: </label>
+    <input type="text" id="cityInput">
+    <button onclick="searchCity()">Search</button>
+    <div id="result"></div>
+  
+    
+    <h4>Currency Converter</h4>
+    <label for="amountUSD"id ="amountLabel">Enter amount in USD:</label>
+    <input type="number" id="amountUSD" placeholder="Enter amount"oninput="convertCurrency()">
+    <div id="USD"></div>
+
+    <button onclick="reset()" class="resetButton">reset</button>
+</main> 
 
   <footer>
     &copy;<span id="year"></span> | Week 06 - Project| CSE 121b
